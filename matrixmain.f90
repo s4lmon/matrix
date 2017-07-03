@@ -209,10 +209,10 @@ contains
 
 
     do cc=1,size(this%idx)
-      write(*,'(x,a,i0)') "cc = ", cc
+      !write(*,'(x,a,i0)') "cc = ", cc
       do rr=max(1,1-this%idx(cc)),min(this%matrixsize,this%matrixsize-this%idx(cc))
       result(rr) = result(rr) + this%values(rr,cc)*multiplier(this%idx(cc)+rr)
-      write(*,'(x,a,3(i0,a))') "Multiplying row ", rr, " column ", cc, " of values by row ", this%idx(cc)+rr, " of multiplier."
+      !write(*,'(x,a,3(i0,a))') "Multiplying row ", rr, " column ", cc, " of values by row ", this%idx(cc)+rr, " of multiplier."
     end do
 
     end do
